@@ -68,13 +68,13 @@ juce_add_plugin(
   PRODUCT_NAME
     ${TREMOLO_PLUGIN_NAME}
   VERSION
-    0.0.0 # TODO: add version
+    0.0.0
   COMPANY_NAME
-    "Lit.Rocks" # TODO: add company
+    "Lit.Rocks"
   PLUGIN_MANUFACTURER_CODE
-    Liro # TODO: add plugin manufacturer code
+    Liro
   PLUGIN_CODE
-    Tmll# TODO: add plugin code
+    Tmll
   FORMATS
     Standalone
     AU
