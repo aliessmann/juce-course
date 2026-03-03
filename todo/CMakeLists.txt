@@ -55,10 +55,12 @@ cpmaddpackage(
 include(cmake/CompilerWarnings.cmake)
 include(cmake/Util.cmake)
 
-if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
-  # Sets the Windows VST3 installation location to one
+# Only executed, if COPY_PLUGIN_AFTER_BUILD is TRUE
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+  # Sets the Linux VST3 installation location to one
   # that doesn't require elevated permissions
-  set_directory_properties(PROPERTIES JUCE_VST3_COPY_DIR "$ENV{LOCALAPPDATA}/Programs/Common/VST3")
+  # Absolute Path needed because of an error when compiling with ~/.vst3.
+  set_directory_properties(PROPERTIES JUCE_VST3_COPY_DIR "/home/alex/.vst3")
 endif()
 
 # Adds a plugin target.
